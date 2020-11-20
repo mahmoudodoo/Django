@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href= " {% static "css/first_app.css" %} ">
+</head>
+<body>
+    <h1>Hello Welcome to the first Template !!!</h1>
+    {{ greats }}
+    <img src="{% static 'images/stand up.png' %}" alt="My image">
+</body>
+</html>
