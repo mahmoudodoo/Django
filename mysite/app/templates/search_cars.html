@@ -1,0 +1,28 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+
+
+{% block content %}
+{% if searched %}
+<h1> You Searched For {{ searched }}</h1>
+{%for car in cars %}
+
+<div class="card">
+    <h5 class="card-header">{{car.name}}</h5>
+    <img class="card-img-top carimge" src="{{car.image.url}}" alt="Card image cap">
+     </a>
+    <div class="card-body addline" style=" display: flex;justify-content: space-between;flex-direction: column;">
+      <p class="card-text">{{car.description}}</p>
+    </div>
+  </div>
+
+  {% endfor %}
+  {% if not cars %}
+  <h1><strong>No cars Available!</strong></h1>
+  {% endif %}
+{% else %}
+    <h1>You forget to search!</h1>
+{% endif%}
+
+  {% endblock %}

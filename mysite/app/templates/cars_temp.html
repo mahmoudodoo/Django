@@ -1,0 +1,22 @@
+{% extends 'navbar.html' %}
+{% load static %}
+ 
+ 
+ 
+{% block content %}
+<div class="container">
+{%for car in cars %}
+<div class="card">
+    <h5 class="card-header">{{car.car_name}}</h5>
+    <img class="card-img-top" src="{{car.image.url}}" alt="Card image cap">
+    <div class="card-body addline" style=" display: flex;justify-content: space-between;flex-direction: column;">
+      <p class="card-text">{{car.description}}</p>
+    </div>
+  </div>
+
+  {% endfor %}
+  {% if not cars %}
+  <h1><strong>No Cars Available!</strong></h1>
+  {% endif %}
+</div>
+{% endblock %}

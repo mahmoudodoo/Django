@@ -1,0 +1,11 @@
+  Hi Everybody,
+
+	        Django Create Project And run the server
+
+To Create a new project run the below command
+
+1- django-admin startproject projectname
+
+2- cd projectname
+
+3- python manage.py runserver
